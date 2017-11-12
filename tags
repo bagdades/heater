@@ -1,0 +1,146 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADCInit	heater.c	/^void ADCInit(void)$/;"	f	signature:(void)
+ADCInit	heater.h	/^void ADCInit		(void);$/;"	p	signature:(void)
+ADCRead	heater.c	/^int16_t ADCRead(uint8_t chanel)$/;"	f	signature:(uint8_t chanel)
+ADCRead	heater.h	/^int16_t ADCRead		(uint8_t chanel);$/;"	p	signature:(uint8_t chanel)
+ADC_VREF_TYPE	heater.h	59;"	d
+AS	Makefile	/^AS = avr-gcc$/;"	m
+BUT_DDR	heater.h	30;"	d
+BUT_MASK	heater.h	35;"	d
+BUT_PIN	heater.h	31;"	d
+BUT_PORT	heater.h	29;"	d
+CC	Makefile	/^CC = avr-gcc$/;"	m
+CONTR_DDR	heater.h	56;"	d
+CONTR_OUT	heater.h	57;"	d
+CONTR_PORT	heater.h	55;"	d
+CP	Makefile	/^CP = avr-objcopy$/;"	m
+DELAY_LONG	heater.h	37;"	d
+DELAY_SHORT	heater.h	36;"	d
+DIG_1	heater.h	21;"	d
+DIG_2	heater.h	22;"	d
+DIG_3	heater.h	23;"	d
+DIG_DDR	heater.h	20;"	d
+DIG_MASK	heater.h	26;"	d
+DIG_P	heater.h	25;"	d
+DIG_PORT	heater.h	19;"	d
+DOWN	heater.h	33;"	d
+EEMEM	heater.c	/^uint16_t setTempEeprom EEMEM = 130;$/;"	v
+FALSE	heater.h	/^	FALSE = 0,$/;"	e	enum:__anon1
+INC_H_	inc.h	9;"	d
+ISR	heater.c	/^ISR(TIMER0_OVF_vect)$/;"	f
+ISR	usart.c	/^ISR(USART_RXC_vect){$/;"	f
+ISR	usart.c	/^ISR(USART_TXC_vect){$/;"	f
+Init	heater.c	/^void Init(void)$/;"	f	signature:(void)
+Init	heater.h	/^void Init			(void);$/;"	p	signature:(void)
+KeyScan	heater.c	/^void KeyScan(void)$/;"	f	signature:(void)
+KeyScan	heater.h	/^void KeyScan		(void);$/;"	p	signature:(void)
+LCD_DDR	heater.h	18;"	d
+LCD_PORT	heater.h	17;"	d
+LD	Makefile	/^LD = avr-gcc$/;"	m
+LcdUpdate	heater.c	/^void LcdUpdate(void)$/;"	f	signature:(void)
+LcdUpdate	heater.h	/^void LcdUpdate		(void);$/;"	p	signature:(void)
+MAX_TEMP	heater.h	51;"	d
+MCU	Makefile	/^MCU = mcu=atmega8$/;"	m
+MIN_TEMP	heater.h	52;"	d
+MODE_FOUR	heater.h	/^	MODE_FOUR$/;"	e	enum:__anon2
+MODE_ONE	heater.h	/^	MODE_ONE = 0,$/;"	e	enum:__anon2
+MODE_THREE	heater.h	/^	MODE_THREE,$/;"	e	enum:__anon2
+MODE_TWO	heater.h	/^	MODE_TWO,$/;"	e	enum:__anon2
+OD	Makefile	/^OD = avr-objdump$/;"	m
+PAYALKA_H_	heater.h	9;"	d
+PERIOD_ADC_READ	heater.h	47;"	d
+PERIOD_KEY_SCAN	heater.h	45;"	d
+PERIOD_LCD_UPDATE	heater.h	46;"	d
+PERIOD_TEMP_UPDATE	heater.h	48;"	d
+PROGMEM	heater.h	/^static const uint8_t sevenSegmentCod[] PROGMEM ={$/;"	v
+RM	Makefile	/^RM = rm$/;"	m
+ResultBcd	heater.c	/^void ResultBcd(uint16_t data)$/;"	f	signature:(uint16_t data)
+ResultBcd	heater.h	/^void ResultBcd		(uint16_t data);$/;"	p	signature:(uint16_t data)
+SZ	Makefile	/^SZ = avr-size$/;"	m
+SaveEepromMode	heater.c	/^void SaveEepromMode(void)$/;"	f	signature:(void)
+SaveEepromMode	heater.h	/^void SaveEepromMode	(void);$/;"	p	signature:(void)
+T0_FREQ	heater.h	41;"	d
+T0_INIT	heater.h	42;"	d
+T0_PRESC	heater.h	40;"	d
+TARGET	Makefile	/^TARGET = heater$/;"	m
+TIME_SET_TEMP_VISIBLE	heater.h	50;"	d
+TIME_WRITE_EEPROM	heater.h	49;"	d
+TRUE	heater.h	/^	TRUE$/;"	e	enum:__anon1
+Timer0Init	heater.c	/^void Timer0Init(void)$/;"	f	signature:(void)
+Timer0Init	heater.h	/^void Timer0Init		(void);$/;"	p	signature:(void)
+UP	heater.h	32;"	d
+USART_BAUDRATE	usart.h	11;"	d
+USART_BAUDRATE_DIV	usart.h	14;"	d
+USART_H_	usart.h	9;"	d
+USART_RX_BUFFER_SIZE	usart.h	13;"	d
+USART_TX_BUFFER_SIZE	usart.h	12;"	d
+UsartGetChar	usart.c	/^uint8_t  UsartGetChar(void){$/;"	f	signature:(void)
+UsartGetChar	usart.h	/^uint8_t UsartGetChar	(void);$/;"	p	signature:(void)
+UsartInit	usart.c	/^void UsartInit(void){$/;"	f	signature:(void)
+UsartInit	usart.h	/^void UsartInit			(void);$/;"	p	signature:(void)
+UsartPutChar	usart.c	/^void UsartPutChar(uint8_t ch){$/;"	f	signature:(uint8_t ch)
+UsartPutChar	usart.h	/^void UsartPutChar		(uint8_t ch);$/;"	p	signature:(uint8_t ch)
+UsartPutString	usart.c	/^void UsartPutString(uint8_t *string){$/;"	f	signature:(uint8_t *string)
+UsartPutString	usart.h	/^void UsartPutString		(uint8_t *string);$/;"	p	signature:(uint8_t *string)
+_DOWN	heater.h	/^	_DOWN$/;"	e	enum:keyPad
+_UP	heater.h	/^	_UP = 1,$/;"	e	enum:keyPad
+_flag	heater.h	/^volatile struct _flag{$/;"	s
+_flag::adcRead	heater.h	/^	uint16_t adcRead:		1;$/;"	m	struct:_flag	access:public
+_flag::digPoint	heater.h	/^	uint16_t digPoint:		1;$/;"	m	struct:_flag	access:public
+_flag::eepromWrite	heater.h	/^	uint16_t eepromWrite:	1;$/;"	m	struct:_flag	access:public
+_flag::keyScan	heater.h	/^	uint16_t keyScan:		1;$/;"	m	struct:_flag	access:public
+_flag::lcdUpdate	heater.h	/^	uint16_t lcdUpdate:		1;$/;"	m	struct:_flag	access:public
+_flag::modeEepromWrite	heater.h	/^	uint16_t modeEepromWrite:1;$/;"	m	struct:_flag	access:public
+_flag::readTemp	heater.h	/^	uint16_t readTemp:		1;$/;"	m	struct:_flag	access:public
+_flag::setTempVisible	heater.h	/^	uint16_t setTempVisible:	1;$/;"	m	struct:_flag	access:public
+_flag::tempEepromWrite	heater.h	/^	uint16_t tempEepromWrite:1;$/;"	m	struct:_flag	access:public
+adcRead	heater.h	/^	uint16_t adcRead:		1;$/;"	m	struct:_flag	access:public
+adcResult	heater.c	/^int16_t adcResult;$/;"	v
+byte	main.c	/^	uint8_t byte;$/;"	l
+ch	usart.c	/^	uint8_t ch = 0;$/;"	l
+count	heater.c	/^	static uint8_t count = 0;$/;"	l	file:
+countSetTempVisible	heater.c	/^volatile uint16_t countSetTempVisible = 0;$/;"	v
+countTimeAdcRead	heater.c	/^volatile uint8_t countTimeAdcRead = PERIOD_ADC_READ;$/;"	v
+countTimeKeyScan	heater.c	/^volatile uint8_t countTimeKeyScan = PERIOD_KEY_SCAN;$/;"	v
+countTimeLcdUpdate	heater.c	/^volatile uint8_t countTimeLcdUpdate = PERIOD_LCD_UPDATE;$/;"	v
+countTimeTempRead	heater.c	/^volatile uint16_t countTimeTempRead = PERIOD_TEMP_UPDATE;$/;"	v
+countTimeWriteEeprom	heater.c	/^volatile uint16_t countTimeWriteEeprom = 0;$/;"	v
+dataOut	heater.c	/^uint8_t dataOut[4];$/;"	v
+diffErr	main.c	/^int16_t diffErr;$/;"	v
+digPoint	heater.h	/^	uint16_t digPoint:		1;$/;"	m	struct:_flag	access:public
+eepromWrite	heater.h	/^	uint16_t eepromWrite:	1;$/;"	m	struct:_flag	access:public
+error	main.c	/^int16_t error;$/;"	v
+flag	heater.h	/^}flag;$/;"	v	typeref:struct:_flag
+i	heater.c	/^	uint8_t i;$/;"	l
+i	usart.c	/^	uint16_t i = USART_BAUDRATE_DIV;$/;"	l
+integralErr	main.c	/^int16_t integralErr;$/;"	v
+key	heater.c	/^	uint8_t key;$/;"	l
+keyPad	heater.h	/^enum keyPad{$/;"	g
+keyPressed	heater.c	/^uint8_t keyPressed;$/;"	v
+keyScan	heater.h	/^	uint16_t keyScan:		1;$/;"	m	struct:_flag	access:public
+lcdUpdate	heater.h	/^	uint16_t lcdUpdate:		1;$/;"	m	struct:_flag	access:public
+main	main.c	/^int main(void)$/;"	f	signature:(void)
+modeEepromWrite	heater.h	/^	uint16_t modeEepromWrite:1;$/;"	m	struct:_flag	access:public
+preErr	main.c	/^int16_t preErr;$/;"	v
+pwm	main.c	/^int16_t pwm;$/;"	v
+pwmCounter	main.c	/^int16_t pwmCounter;$/;"	v
+readTemp	heater.h	/^	uint16_t readTemp:		1;$/;"	m	struct:_flag	access:public
+rxCountBuffer	usart.c	/^volatile uint8_t rxCountBuffer;$/;"	v
+rxHeadBuffer	usart.c	/^volatile uint8_t rxHeadBuffer;$/;"	v
+rxTailBuffer	usart.c	/^volatile uint8_t rxTailBuffer;$/;"	v
+setTemp	heater.c	/^int16_t setTemp;$/;"	v
+setTempVisible	heater.h	/^	uint16_t setTempVisible:	1;$/;"	m	struct:_flag	access:public
+temp	heater.c	/^	static uint8_t temp = 0;$/;"	l	file:
+tempAdc	main.c	/^			int16_t tempAdc;$/;"	l
+tempEepromWrite	heater.h	/^	uint16_t tempEepromWrite:1;$/;"	m	struct:_flag	access:public
+temperatura	heater.c	/^uint16_t temperatura;$/;"	v
+txCountBuffer	usart.c	/^volatile uint8_t txCountBuffer;$/;"	v
+txHeadBuffer	usart.c	/^volatile uint8_t txHeadBuffer;$/;"	v
+txTailBuffer	usart.c	/^volatile uint8_t txTailBuffer;$/;"	v
+usartRxBuffer	usart.h	/^volatile uint8_t usartRxBuffer[USART_TX_BUFFER_SIZE];$/;"	v
+usartTxBuffer	usart.h	/^volatile uint8_t usartTxBuffer[USART_TX_BUFFER_SIZE];$/;"	v

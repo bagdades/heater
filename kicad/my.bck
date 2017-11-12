@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AVR-SPI6
+D Avr spi flash interface
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,483 @@
+Cmp-Mod V01 Created by PcbNew   date = нд, 10-січ-2016 19:12:14 +0200
+
+BeginCmp
+TimeStamp = 56931B54
+Path = /569198EB
+Reference = P1;
+ValeurCmp = CONN_01X02;
+IdModule  = w_conn_kk100:kk100_22-23-2021;
+EndCmp
+
+BeginCmp
+TimeStamp = 56915184
+Path = /56913B3F
+Reference = IC1;
+ValeurCmp = ATMEGA8-AI;
+IdModule  = w_smd_lqfp:lqfp32;
+EndCmp
+
+BeginCmp
+TimeStamp = 56916281
+Path = /569142BE
+Reference = C2;
+ValeurCmp = 100n;
+IdModule  = w_smd_cap:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5691628D
+Path = /56913D24
+Reference = R1;
+ValeurCmp = 2k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56916299
+Path = /56914263
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917E8A
+Path = /56915517
+Reference = C3;
+ValeurCmp = 100n;
+IdModule  = w_smd_cap:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917E96
+Path = /56917A1B
+Reference = C7;
+ValeurCmp = 100n;
+IdModule  = w_smd_cap:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EA2
+Path = /56915201
+Reference = R3;
+ValeurCmp = 470;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EAE
+Path = /56914C30
+Reference = R4;
+ValeurCmp = 240;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EBA
+Path = /569153D2
+Reference = R5;
+ValeurCmp = 6M8;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EC6
+Path = /56914BCE
+Reference = R6;
+ValeurCmp = 22k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917ED2
+Path = /56914ACC
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EDE
+Path = /56914B4E
+Reference = R8;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56917EEA
+Path = /56916F5B
+Reference = R9;
+ValeurCmp = 470;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56918ABB
+Path = /56914A07
+Reference = U1;
+ValeurCmp = TL071;
+IdModule  = w_smd_dil:so-8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5691ABEC
+Path = /56918FCA
+Reference = U2;
+ValeurCmp = 7805MS;
+IdModule  = w_smd_dil:so-8;
+EndCmp
+
+BeginCmp
+TimeStamp = 5691E9DA
+Path = /5691B5B6
+Reference = D1;
+ValeurCmp = TL431LP;
+IdModule  = Discret:TO92-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931B66
+Path = /5691C041
+Reference = P3;
+ValeurCmp = CONN_01X02;
+IdModule  = w_conn_kk100:kk100_22-23-2021;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931B78
+Path = /5691DA7C
+Reference = P4;
+ValeurCmp = CONN_01X02;
+IdModule  = w_conn_kk100:kk100_22-23-2021;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931B84
+Path = /5691F884
+Reference = R10;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931B90
+Path = /5691F965
+Reference = R11;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931B9C
+Path = /5691F238
+Reference = R12;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BA8
+Path = /5691F5DC
+Reference = R13;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BB4
+Path = /5691F65E
+Reference = R14;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BC0
+Path = /5691F6E3
+Reference = R15;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BCC
+Path = /5691F76B
+Reference = R16;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BD8
+Path = /5691F7F6
+Reference = R17;
+ValeurCmp = 220;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931BE4
+Path = /5691C8E1
+Reference = R18;
+ValeurCmp = 10k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56931C19
+Path = /5691CE25
+Reference = U4;
+ValeurCmp = TRIAC;
+IdModule  = Transistors_TO-220:TO-220_Neutral123_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 569374DF
+Path = /569230DD
+Reference = Q1;
+ValeurCmp = BC817-40;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = 569374EB
+Path = /569232A2
+Reference = Q2;
+ValeurCmp = BC817-40;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = 569374F7
+Path = /56923339
+Reference = Q3;
+ValeurCmp = BC817-40;
+IdModule  = SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = 56937503
+Path = /56923F79
+Reference = R22;
+ValeurCmp = 1K;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5693750F
+Path = /5692417D
+Reference = R23;
+ValeurCmp = 1K;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 5693751B
+Path = /5692422B
+Reference = R24;
+ValeurCmp = 1K;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = 56937DF1
+Path = /569270C8
+Reference = P5;
+ValeurCmp = CONN_01X03;
+IdModule  = w_conn_jst-ph:b3b-ph-kl;
+EndCmp
+
+BeginCmp
+TimeStamp = 5692474E
+Path = /5691703E
+Reference = D5;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 5692475C
+Path = /569175ED
+Reference = D6;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 5692476A
+Path = /569234F6
+Reference = D7;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 56924778
+Path = /5692376D
+Reference = D8;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 56924786
+Path = /5692383F
+Reference = D9;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 56924794
+Path = /569238FC
+Reference = D10;
+ValeurCmp = D;
+IdModule  = w_pth_diodes:diode_do41;
+EndCmp
+
+BeginCmp
+TimeStamp = 569247A6
+Path = /56923A60
+Reference = P6;
+ValeurCmp = CONN_01X02;
+IdModule  = w_conn_kk100:kk100_22-23-2021;
+EndCmp
+
+BeginCmp
+TimeStamp = 5692E5DB
+Path = /56922B65
+Reference = P2;
+ValeurCmp = CONN_01X11;
+IdModule  = w_pin_strip:pin_strip_11;
+EndCmp
+
+BeginCmp
+TimeStamp = 5692E5FE
+Path = /5691C9E2
+Reference = U3;
+ValeurCmp = MOC3023M;
+IdModule  = Sockets_DIP:DIP-6__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = 56930840
+Path = /56914DF2
+Reference = D2;
+ValeurCmp = D;
+IdModule  = w_smd_diode:sod80c;
+EndCmp
+
+BeginCmp
+TimeStamp = 5693084D
+Path = /56914E6F
+Reference = D3;
+ValeurCmp = D;
+IdModule  = w_smd_diode:sod80c;
+EndCmp
+
+BeginCmp
+TimeStamp = 5693085A
+Path = /5691693C
+Reference = D4;
+ValeurCmp = ZENER;
+IdModule  = w_smd_diode:sod80c;
+EndCmp
+
+BeginCmp
+TimeStamp = 56943108
+Path = /5692961A
+Reference = P7;
+ValeurCmp = AVR-SPI6;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 5694F707
+Path = /569224C7
+Reference = U5;
+ValeurCmp = LM7812ACT;
+IdModule  = Transistors_TO-220:TO-220_Neutral123_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 56950F63
+Path = /5691D399
+Reference = R19;
+ValeurCmp = 10k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 56950F6E
+Path = /5691D55F
+Reference = R20;
+ValeurCmp = 330;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 56950F79
+Path = /5691DCFD
+Reference = R21;
+ValeurCmp = 51;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM15mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 569516AD
+Path = /56913E30
+Reference = C1;
+ValeurCmp = 47u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 569516BB
+Path = /569157E0
+Reference = C4;
+ValeurCmp = 1u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 569516C9
+Path = /569170B4
+Reference = C5;
+ValeurCmp = 47u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 56951D2D
+Path = /56919E7B
+Reference = C8;
+ValeurCmp = 47u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 56951D37
+Path = /5691DD79
+Reference = C9;
+ValeurCmp = 100n;
+IdModule  = Capacitors_ThroughHole:Capacitor7x2RM5;
+EndCmp
+
+BeginCmp
+TimeStamp = 569530A9
+Path = /569179AA
+Reference = C6;
+ValeurCmp = 330u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.5x8mm_RM3.5;
+EndCmp
+
+BeginCmp
+TimeStamp = 569530B7
+Path = /56926558
+Reference = C10;
+ValeurCmp = 47u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+EndListe

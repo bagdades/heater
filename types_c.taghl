@@ -1,0 +1,10 @@
+syn keyword CTagsLocalVariable count key temp tempAdc i byte ch
+syn keyword CTagsStructure _flag
+syn keyword CTagsMember adcRead digPoint keyScan lcdUpdate modeEepromWrite setTempVisible readTemp tempEepromWrite eepromWrite
+syn keyword CTagsGlobalVariable countTimeAdcRead usartTxBuffer rxCountBuffer rxHeadBuffer preErr keyPressed rxTailBuffer temperatura countTimeWriteEeprom flag txCountBuffer txHeadBuffer txTailBuffer integralErr countTimeKeyScan EEMEM pwmCounter dataOut error setTemp diffErr countTimeLcdUpdate usartRxBuffer adcResult countSetTempVisible countTimeTempRead pwm
+syn keyword CTagsConstant PROGMEM
+syn keyword CTagsEnumeratorName keyPad
+syn keyword CTagsEnumerationValue MODE_THREE MODE_TWO MODE_ONE _DOWN TRUE MODE_FOUR FALSE _UP
+syn keyword CTagsFunction LcdUpdate UsartGetChar ADCInit UsartPutChar SaveEepromMode UsartPutString main Timer0Init ADCRead Init ResultBcd KeyScan ISR UsartInit
+syn keyword CTagsDefinedName USART_TX_BUFFER_SIZE BUT_DDR DIG_2 DIG_3 DIG_1 DOWN UP DELAY_SHORT DIG_PORT CONTR_OUT ADC_VREF_TYPE T0_FREQ USART_BAUDRATE_DIV TIME_WRITE_EEPROM MAX_TEMP LCD_DDR LCD_PORT T0_PRESC USART_BAUDRATE T0_INIT DELAY_LONG DIG_MASK PAYALKA_H_ PERIOD_ADC_READ DIG_DDR BUT_MASK USART_H_ CONTR_DDR INC_H_ MIN_TEMP PERIOD_LCD_UPDATE PERIOD_KEY_SCAN PERIOD_TEMP_UPDATE TIME_SET_TEMP_VISIBLE DIG_P USART_RX_BUFFER_SIZE BUT_PORT BUT_PIN CONTR_PORT
+

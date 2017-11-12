@@ -1,0 +1,1328 @@
+
+heater.elf:     С„РѕСЂРјР°С‚ С„Р°Р№Р»Р° elf32-avr
+
+Р РѕР·РґС–Р»Рё:
+Р†РЅРґ РќР°Р·РІР°         Р РѕР·РјС–СЂ    VMA       LMA       Р¤Р°Р№Р»      Р’РёСЂС–РІРЅ
+  0 .text         0000077e  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000012  00800060  0000077e  00000832  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000004d  00800072  00800072  00000844  2**0
+                  ALLOC
+  3 .eeprom       00000002  00810000  00810000  00000844  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000011  00000000  00000000  00000846  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000858  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 000000c8  00000000  00000000  00000894  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000cd6  00000000  00000000  0000095c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000056e  00000000  00000000  00001632  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000354  00000000  00000000  00001ba0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000194  00000000  00000000  00001ef4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    0000044a  00000000  00000000  00002088  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000038b  00000000  00000000  000024d2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 000000b8  00000000  00000000  0000285d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Р”РёР·Р°СЃРµРјР±Р»СЋРІР°РЅРЅСЏ СЂРѕР·РґС–Р»Сѓ .text:
+
+00000000 <__vectors>:
+   0:	18 c0       	rjmp	.+48     	; 0x32 <__ctors_end>
+   2:	32 c0       	rjmp	.+100    	; 0x68 <__bad_interrupt>
+   4:	31 c0       	rjmp	.+98     	; 0x68 <__bad_interrupt>
+   6:	30 c0       	rjmp	.+96     	; 0x68 <__bad_interrupt>
+   8:	2f c0       	rjmp	.+94     	; 0x68 <__bad_interrupt>
+   a:	2e c0       	rjmp	.+92     	; 0x68 <__bad_interrupt>
+   c:	2d c0       	rjmp	.+90     	; 0x68 <__bad_interrupt>
+   e:	2c c0       	rjmp	.+88     	; 0x68 <__bad_interrupt>
+  10:	2b c0       	rjmp	.+86     	; 0x68 <__bad_interrupt>
+  12:	4c c0       	rjmp	.+152    	; 0xac <__vector_9>
+  14:	29 c0       	rjmp	.+82     	; 0x68 <__bad_interrupt>
+  16:	3a c3       	rjmp	.+1652   	; 0x68c <__vector_11>
+  18:	27 c0       	rjmp	.+78     	; 0x68 <__bad_interrupt>
+  1a:	0d c3       	rjmp	.+1562   	; 0x636 <__vector_13>
+  1c:	25 c0       	rjmp	.+74     	; 0x68 <__bad_interrupt>
+  1e:	24 c0       	rjmp	.+72     	; 0x68 <__bad_interrupt>
+  20:	23 c0       	rjmp	.+70     	; 0x68 <__bad_interrupt>
+  22:	22 c0       	rjmp	.+68     	; 0x68 <__bad_interrupt>
+  24:	21 c0       	rjmp	.+66     	; 0x68 <__bad_interrupt>
+
+00000026 <__trampolines_end>:
+  26:	3f 06       	cpc	r3, r31
+  28:	5b 4f       	sbci	r21, 0xFB	; 251
+  2a:	66 6d       	ori	r22, 0xD6	; 214
+  2c:	7d 07       	cpc	r23, r29
+  2e:	7f 6f       	ori	r23, 0xFF	; 255
+  30:	40 00       	.word	0x0040	; ????
+
+00000032 <__ctors_end>:
+  32:	11 24       	eor	r1, r1
+  34:	1f be       	out	0x3f, r1	; 63
+  36:	cf e5       	ldi	r28, 0x5F	; 95
+  38:	d4 e0       	ldi	r29, 0x04	; 4
+  3a:	de bf       	out	0x3e, r29	; 62
+  3c:	cd bf       	out	0x3d, r28	; 61
+
+0000003e <__do_copy_data>:
+  3e:	10 e0       	ldi	r17, 0x00	; 0
+  40:	a0 e6       	ldi	r26, 0x60	; 96
+  42:	b0 e0       	ldi	r27, 0x00	; 0
+  44:	ee e7       	ldi	r30, 0x7E	; 126
+  46:	f7 e0       	ldi	r31, 0x07	; 7
+  48:	02 c0       	rjmp	.+4      	; 0x4e <__SREG__+0xf>
+  4a:	05 90       	lpm	r0, Z+
+  4c:	0d 92       	st	X+, r0
+  4e:	a2 37       	cpi	r26, 0x72	; 114
+  50:	b1 07       	cpc	r27, r17
+  52:	d9 f7       	brne	.-10     	; 0x4a <__SREG__+0xb>
+
+00000054 <__do_clear_bss>:
+  54:	20 e0       	ldi	r18, 0x00	; 0
+  56:	a2 e7       	ldi	r26, 0x72	; 114
+  58:	b0 e0       	ldi	r27, 0x00	; 0
+  5a:	01 c0       	rjmp	.+2      	; 0x5e <.do_clear_bss_start>
+
+0000005c <.do_clear_bss_loop>:
+  5c:	1d 92       	st	X+, r1
+
+0000005e <.do_clear_bss_start>:
+  5e:	af 3b       	cpi	r26, 0xBF	; 191
+  60:	b2 07       	cpc	r27, r18
+  62:	e1 f7       	brne	.-8      	; 0x5c <.do_clear_bss_loop>
+  64:	6a d1       	rcall	.+724    	; 0x33a <main>
+  66:	89 c3       	rjmp	.+1810   	; 0x77a <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	cb cf       	rjmp	.-106    	; 0x0 <__vectors>
+
+0000006a <Init>:
+volatile uint16_t countTimeWriteEeprom = 0;
+volatile uint16_t countSetTempVisible = 0;
+
+void Init(void)
+{
+	BUT_DDR &= ~BUT_MASK;	//port in
+  6a:	81 b3       	in	r24, 0x11	; 17
+  6c:	8f 73       	andi	r24, 0x3F	; 63
+  6e:	81 bb       	out	0x11, r24	; 17
+	BUT_PORT |= BUT_MASK;	//pull-up
+  70:	82 b3       	in	r24, 0x12	; 18
+  72:	80 6c       	ori	r24, 0xC0	; 192
+  74:	82 bb       	out	0x12, r24	; 18
+	LCD_DDR = 0xFF;			//port out
+  76:	8f ef       	ldi	r24, 0xFF	; 255
+  78:	87 bb       	out	0x17, r24	; 23
+	DIG_DDR |= DIG_MASK;	//port out
+  7a:	84 b3       	in	r24, 0x14	; 20
+  7c:	88 63       	ori	r24, 0x38	; 56
+  7e:	84 bb       	out	0x14, r24	; 20
+#ifdef DEBUG
+	DIG_PORT |= DIG_MASK;	//hight level
+#else
+	DIG_PORT &= ~DIG_MASK;	//low level
+  80:	85 b3       	in	r24, 0x15	; 21
+  82:	87 7c       	andi	r24, 0xC7	; 199
+  84:	85 bb       	out	0x15, r24	; 21
+#endif
+	CONTR_DDR |= 1 << CONTR_OUT;
+  86:	8c 9a       	sbi	0x11, 4	; 17
+	sei();
+  88:	78 94       	sei
+	setTemp = eeprom_read_word(&setTempEeprom);//read from eeprom temp value
+  8a:	80 e0       	ldi	r24, 0x00	; 0
+  8c:	90 e0       	ldi	r25, 0x00	; 0
+  8e:	50 d3       	rcall	.+1696   	; 0x730 <eeprom_read_word>
+  90:	90 93 79 00 	sts	0x0079, r25
+  94:	80 93 78 00 	sts	0x0078, r24
+  98:	08 95       	ret
+
+0000009a <Timer0Init>:
+void Timer0Init(void)
+{
+#if(F_CPU != 8000000)
+#error ***You must set TCCR0
+#endif
+	TCCR0|=(1<<CS02)|(1<<CS00);//T0_PRESC = 1024
+  9a:	83 b7       	in	r24, 0x33	; 51
+  9c:	85 60       	ori	r24, 0x05	; 5
+  9e:	83 bf       	out	0x33, r24	; 51
+	TCNT0 = T0_INIT;
+  a0:	88 ef       	ldi	r24, 0xF8	; 248
+  a2:	82 bf       	out	0x32, r24	; 50
+	TIMSK|=(1<<TOIE0);//enable interrupt overllow timer0
+  a4:	89 b7       	in	r24, 0x39	; 57
+  a6:	81 60       	ori	r24, 0x01	; 1
+  a8:	89 bf       	out	0x39, r24	; 57
+  aa:	08 95       	ret
+
+000000ac <__vector_9>:
+}
+
+ISR(TIMER0_OVF_vect)
+{
+  ac:	1f 92       	push	r1
+  ae:	0f 92       	push	r0
+  b0:	0f b6       	in	r0, 0x3f	; 63
+  b2:	0f 92       	push	r0
+  b4:	11 24       	eor	r1, r1
+  b6:	8f 93       	push	r24
+  b8:	9f 93       	push	r25
+	TCNT0 = T0_INIT;
+  ba:	88 ef       	ldi	r24, 0xF8	; 248
+  bc:	82 bf       	out	0x32, r24	; 50
+	countTimeKeyScan --;
+  be:	80 91 64 00 	lds	r24, 0x0064
+  c2:	81 50       	subi	r24, 0x01	; 1
+  c4:	80 93 64 00 	sts	0x0064, r24
+	countTimeLcdUpdate --;
+  c8:	80 91 63 00 	lds	r24, 0x0063
+  cc:	81 50       	subi	r24, 0x01	; 1
+  ce:	80 93 63 00 	sts	0x0063, r24
+	countTimeAdcRead --;
+  d2:	80 91 62 00 	lds	r24, 0x0062
+  d6:	81 50       	subi	r24, 0x01	; 1
+  d8:	80 93 62 00 	sts	0x0062, r24
+	countTimeTempRead --;
+  dc:	80 91 60 00 	lds	r24, 0x0060
+  e0:	90 91 61 00 	lds	r25, 0x0061
+  e4:	01 97       	sbiw	r24, 0x01	; 1
+  e6:	90 93 61 00 	sts	0x0061, r25
+  ea:	80 93 60 00 	sts	0x0060, r24
+	if(!countTimeKeyScan)
+  ee:	80 91 64 00 	lds	r24, 0x0064
+  f2:	81 11       	cpse	r24, r1
+  f4:	08 c0       	rjmp	.+16     	; 0x106 <__vector_9+0x5a>
+	{
+		countTimeKeyScan = PERIOD_KEY_SCAN;
+  f6:	8f e0       	ldi	r24, 0x0F	; 15
+  f8:	80 93 64 00 	sts	0x0064, r24
+		flag.keyScan = TRUE;
+  fc:	80 91 8e 00 	lds	r24, 0x008E
+ 100:	81 60       	ori	r24, 0x01	; 1
+ 102:	80 93 8e 00 	sts	0x008E, r24
+	}
+	if(!countTimeLcdUpdate)
+ 106:	80 91 63 00 	lds	r24, 0x0063
+ 10a:	81 11       	cpse	r24, r1
+ 10c:	08 c0       	rjmp	.+16     	; 0x11e <__vector_9+0x72>
+	{
+		countTimeLcdUpdate = PERIOD_LCD_UPDATE;
+ 10e:	85 e0       	ldi	r24, 0x05	; 5
+ 110:	80 93 63 00 	sts	0x0063, r24
+		flag.lcdUpdate = TRUE;
+ 114:	80 91 8e 00 	lds	r24, 0x008E
+ 118:	82 60       	ori	r24, 0x02	; 2
+ 11a:	80 93 8e 00 	sts	0x008E, r24
+	}
+	if(!countTimeAdcRead)
+ 11e:	80 91 62 00 	lds	r24, 0x0062
+ 122:	81 11       	cpse	r24, r1
+ 124:	08 c0       	rjmp	.+16     	; 0x136 <__vector_9+0x8a>
+	{
+		countTimeAdcRead = PERIOD_ADC_READ;
+ 126:	8a e0       	ldi	r24, 0x0A	; 10
+ 128:	80 93 62 00 	sts	0x0062, r24
+		flag.adcRead = TRUE;
+ 12c:	80 91 8e 00 	lds	r24, 0x008E
+ 130:	84 60       	ori	r24, 0x04	; 4
+ 132:	80 93 8e 00 	sts	0x008E, r24
+	}
+	if(!countTimeTempRead)
+ 136:	80 91 60 00 	lds	r24, 0x0060
+ 13a:	90 91 61 00 	lds	r25, 0x0061
+ 13e:	89 2b       	or	r24, r25
+ 140:	59 f4       	brne	.+22     	; 0x158 <__vector_9+0xac>
+	{
+		countTimeTempRead = PERIOD_TEMP_UPDATE;
+ 142:	84 ef       	ldi	r24, 0xF4	; 244
+ 144:	91 e0       	ldi	r25, 0x01	; 1
+ 146:	90 93 61 00 	sts	0x0061, r25
+ 14a:	80 93 60 00 	sts	0x0060, r24
+		flag.readTemp = TRUE;
+ 14e:	80 91 8f 00 	lds	r24, 0x008F
+ 152:	81 60       	ori	r24, 0x01	; 1
+ 154:	80 93 8f 00 	sts	0x008F, r24
+	}
+	if(countTimeWriteEeprom)
+ 158:	80 91 76 00 	lds	r24, 0x0076
+ 15c:	90 91 77 00 	lds	r25, 0x0077
+ 160:	89 2b       	or	r24, r25
+ 162:	a1 f0       	breq	.+40     	; 0x18c <__vector_9+0xe0>
+	{
+		countTimeWriteEeprom --;
+ 164:	80 91 76 00 	lds	r24, 0x0076
+ 168:	90 91 77 00 	lds	r25, 0x0077
+ 16c:	01 97       	sbiw	r24, 0x01	; 1
+ 16e:	90 93 77 00 	sts	0x0077, r25
+ 172:	80 93 76 00 	sts	0x0076, r24
+		if(countTimeWriteEeprom == 0)
+ 176:	80 91 76 00 	lds	r24, 0x0076
+ 17a:	90 91 77 00 	lds	r25, 0x0077
+ 17e:	89 2b       	or	r24, r25
+ 180:	29 f4       	brne	.+10     	; 0x18c <__vector_9+0xe0>
+			flag.eepromWrite = TRUE;
+ 182:	80 91 8e 00 	lds	r24, 0x008E
+ 186:	88 60       	ori	r24, 0x08	; 8
+ 188:	80 93 8e 00 	sts	0x008E, r24
+	}
+	if(countSetTempVisible)
+ 18c:	80 91 74 00 	lds	r24, 0x0074
+ 190:	90 91 75 00 	lds	r25, 0x0075
+ 194:	89 2b       	or	r24, r25
+ 196:	a1 f0       	breq	.+40     	; 0x1c0 <__vector_9+0x114>
+	{
+		countSetTempVisible --;
+ 198:	80 91 74 00 	lds	r24, 0x0074
+ 19c:	90 91 75 00 	lds	r25, 0x0075
+ 1a0:	01 97       	sbiw	r24, 0x01	; 1
+ 1a2:	90 93 75 00 	sts	0x0075, r25
+ 1a6:	80 93 74 00 	sts	0x0074, r24
+		if(countSetTempVisible == 0)
+ 1aa:	80 91 74 00 	lds	r24, 0x0074
+ 1ae:	90 91 75 00 	lds	r25, 0x0075
+ 1b2:	89 2b       	or	r24, r25
+ 1b4:	29 f4       	brne	.+10     	; 0x1c0 <__vector_9+0x114>
+			flag.setTempVisible = FALSE;
+ 1b6:	80 91 8e 00 	lds	r24, 0x008E
+ 1ba:	8f 7b       	andi	r24, 0xBF	; 191
+ 1bc:	80 93 8e 00 	sts	0x008E, r24
+	}
+}
+ 1c0:	9f 91       	pop	r25
+ 1c2:	8f 91       	pop	r24
+ 1c4:	0f 90       	pop	r0
+ 1c6:	0f be       	out	0x3f, r0	; 63
+ 1c8:	0f 90       	pop	r0
+ 1ca:	1f 90       	pop	r1
+ 1cc:	18 95       	reti
+
+000001ce <KeyScan>:
+
+void KeyScan(void)
+{
+	static uint8_t temp = 0;
+	uint8_t key;
+	if(bit_is_clear(BUT_PIN,UP))
+ 1ce:	87 9b       	sbis	0x10, 7	; 16
+ 1d0:	0a c0       	rjmp	.+20     	; 0x1e6 <KeyScan+0x18>
+		key = _UP;
+	else if(bit_is_clear(BUT_PIN,DOWN))
+ 1d2:	86 9b       	sbis	0x10, 6	; 16
+ 1d4:	0a c0       	rjmp	.+20     	; 0x1ea <KeyScan+0x1c>
+			keyPressed = key;
+			temp ++;
+			flag.keyScan = FALSE;
+			return;
+	}
+	else temp = 0;
+ 1d6:	10 92 73 00 	sts	0x0073, r1
+	flag.keyScan = FALSE;
+ 1da:	80 91 8e 00 	lds	r24, 0x008E
+ 1de:	8e 7f       	andi	r24, 0xFE	; 254
+ 1e0:	80 93 8e 00 	sts	0x008E, r24
+ 1e4:	08 95       	ret
+void KeyScan(void)
+{
+	static uint8_t temp = 0;
+	uint8_t key;
+	if(bit_is_clear(BUT_PIN,UP))
+		key = _UP;
+ 1e6:	91 e0       	ldi	r25, 0x01	; 1
+ 1e8:	01 c0       	rjmp	.+2      	; 0x1ec <KeyScan+0x1e>
+	else if(bit_is_clear(BUT_PIN,DOWN))
+		key = _DOWN;
+ 1ea:	92 e0       	ldi	r25, 0x02	; 2
+	/* else if(bit_is_clear(BUT_PIN,SET)) */
+	/* 	key = _SET; */
+	else key = 0;
+	if(key)
+	{
+		if(temp >= DELAY_LONG)
+ 1ec:	80 91 73 00 	lds	r24, 0x0073
+ 1f0:	8e 31       	cpi	r24, 0x1E	; 30
+ 1f2:	30 f0       	brcs	.+12     	; 0x200 <KeyScan+0x32>
+		{
+			temp -= 1;
+ 1f4:	81 50       	subi	r24, 0x01	; 1
+ 1f6:	80 93 73 00 	sts	0x0073, r24
+			keyPressed = key;
+ 1fa:	90 93 a6 00 	sts	0x00A6, r25
+ 1fe:	ed cf       	rjmp	.-38     	; 0x1da <KeyScan+0xc>
+			flag.keyScan = FALSE;
+			return;
+		}
+		if(temp == DELAY_SHORT)
+ 200:	81 30       	cpi	r24, 0x01	; 1
+ 202:	11 f4       	brne	.+4      	; 0x208 <KeyScan+0x3a>
+			keyPressed = key;
+ 204:	90 93 a6 00 	sts	0x00A6, r25
+			temp ++;
+ 208:	8f 5f       	subi	r24, 0xFF	; 255
+ 20a:	80 93 73 00 	sts	0x0073, r24
+ 20e:	e5 cf       	rjmp	.-54     	; 0x1da <KeyScan+0xc>
+
+00000210 <LcdUpdate>:
+{
+	static uint8_t count = 0;
+#ifdef DEBUG
+	DIG_PORT |= DIG_MASK;
+#else
+	DIG_PORT &= ~DIG_MASK;
+ 210:	85 b3       	in	r24, 0x15	; 21
+ 212:	87 7c       	andi	r24, 0xC7	; 199
+ 214:	85 bb       	out	0x15, r24	; 21
+#endif
+	if(count == 0)
+ 216:	80 91 72 00 	lds	r24, 0x0072
+ 21a:	81 11       	cpse	r24, r1
+ 21c:	02 c0       	rjmp	.+4      	; 0x222 <LcdUpdate+0x12>
+	{
+#ifdef DEBUG
+		DIG_PORT &= ~(1 << DIG_3);
+#else
+		DIG_PORT |= (1 << DIG_3);
+ 21e:	ad 9a       	sbi	0x15, 5	; 21
+ 220:	03 c0       	rjmp	.+6      	; 0x228 <LcdUpdate+0x18>
+#endif
+		LCD_PORT = pgm_read_byte(sevenSegmentCod + dataOut[count + 1]);
+        /* View mode heating */
+	}
+	else if(count == 1)
+ 222:	81 30       	cpi	r24, 0x01	; 1
+ 224:	69 f4       	brne	.+26     	; 0x240 <LcdUpdate+0x30>
+	{
+#ifdef DEBUG
+		DIG_PORT &= ~(1 << DIG_2);
+#else
+		DIG_PORT |= (1 << DIG_2);
+ 226:	ac 9a       	sbi	0x15, 4	; 21
+#endif
+		LCD_PORT = pgm_read_byte(sevenSegmentCod + dataOut[count + 1]);
+ 228:	e0 91 72 00 	lds	r30, 0x0072
+ 22c:	f0 e0       	ldi	r31, 0x00	; 0
+ 22e:	e9 55       	subi	r30, 0x59	; 89
+ 230:	ff 4f       	sbci	r31, 0xFF	; 255
+ 232:	e1 81       	ldd	r30, Z+1	; 0x01
+ 234:	f0 e0       	ldi	r31, 0x00	; 0
+ 236:	ea 5d       	subi	r30, 0xDA	; 218
+ 238:	ff 4f       	sbci	r31, 0xFF	; 255
+ 23a:	e4 91       	lpm	r30, Z
+ 23c:	e8 bb       	out	0x18, r30	; 24
+ 23e:	12 c0       	rjmp	.+36     	; 0x264 <LcdUpdate+0x54>
+	}
+	else if(count == 2)
+ 240:	82 30       	cpi	r24, 0x02	; 2
+ 242:	81 f4       	brne	.+32     	; 0x264 <LcdUpdate+0x54>
+	{
+#ifdef DEBUG
+		DIG_PORT &= ~(1 << DIG_1);
+#else
+		DIG_PORT |= (1 << DIG_1);
+ 244:	ab 9a       	sbi	0x15, 3	; 21
+#endif
+		LCD_PORT = pgm_read_byte(sevenSegmentCod + dataOut[count + 1]);
+ 246:	e0 91 72 00 	lds	r30, 0x0072
+ 24a:	f0 e0       	ldi	r31, 0x00	; 0
+ 24c:	e9 55       	subi	r30, 0x59	; 89
+ 24e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 250:	e1 81       	ldd	r30, Z+1	; 0x01
+ 252:	f0 e0       	ldi	r31, 0x00	; 0
+ 254:	ea 5d       	subi	r30, 0xDA	; 218
+ 256:	ff 4f       	sbci	r31, 0xFF	; 255
+ 258:	e4 91       	lpm	r30, Z
+ 25a:	e8 bb       	out	0x18, r30	; 24
+		if (flag.digPoint)
+ 25c:	80 91 8e 00 	lds	r24, 0x008E
+ 260:	87 fd       	sbrc	r24, 7
+			LCD_PORT |= (1 << DIG_P);
+ 262:	c7 9a       	sbi	0x18, 7	; 24
+	}
+	count ++;
+ 264:	80 91 72 00 	lds	r24, 0x0072
+ 268:	8f 5f       	subi	r24, 0xFF	; 255
+	if(count > 2)
+ 26a:	83 30       	cpi	r24, 0x03	; 3
+ 26c:	18 f4       	brcc	.+6      	; 0x274 <LcdUpdate+0x64>
+#endif
+		LCD_PORT = pgm_read_byte(sevenSegmentCod + dataOut[count + 1]);
+		if (flag.digPoint)
+			LCD_PORT |= (1 << DIG_P);
+	}
+	count ++;
+ 26e:	80 93 72 00 	sts	0x0072, r24
+ 272:	02 c0       	rjmp	.+4      	; 0x278 <LcdUpdate+0x68>
+	if(count > 2)
+		count = 0;
+ 274:	10 92 72 00 	sts	0x0072, r1
+	flag.lcdUpdate = FALSE;
+ 278:	80 91 8e 00 	lds	r24, 0x008E
+ 27c:	8d 7f       	andi	r24, 0xFD	; 253
+ 27e:	80 93 8e 00 	sts	0x008E, r24
+ 282:	08 95       	ret
+
+00000284 <ADCInit>:
+void ADCInit(void)
+{
+#if(F_CPU != 8000000)
+#error ***You must set ADCSRA
+#endif
+	ADCSRA|=(1<<ADPS2)|(1<<ADPS1)|(1<<ADEN); //PRESC F_CPU/64
+ 284:	86 b1       	in	r24, 0x06	; 6
+ 286:	86 68       	ori	r24, 0x86	; 134
+ 288:	86 b9       	out	0x06, r24	; 6
+	ADMUX|=ADC_VREF_TYPE; //vref
+ 28a:	87 b1       	in	r24, 0x07	; 7
+ 28c:	80 6c       	ori	r24, 0xC0	; 192
+ 28e:	87 b9       	out	0x07, r24	; 7
+ 290:	08 95       	ret
+
+00000292 <ADCRead>:
+}
+
+int16_t ADCRead(uint8_t chanel)
+{
+	/* ADMUX = ADC_VREF_TYPE | chanel; */
+	ADMUX &= ~ADC_VREF_TYPE;
+ 292:	97 b1       	in	r25, 0x07	; 7
+ 294:	9f 73       	andi	r25, 0x3F	; 63
+ 296:	97 b9       	out	0x07, r25	; 7
+	ADMUX |= chanel;
+ 298:	97 b1       	in	r25, 0x07	; 7
+ 29a:	89 2b       	or	r24, r25
+ 29c:	87 b9       	out	0x07, r24	; 7
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 29e:	8a e1       	ldi	r24, 0x1A	; 26
+ 2a0:	8a 95       	dec	r24
+ 2a2:	f1 f7       	brne	.-4      	; 0x2a0 <ADCRead+0xe>
+ 2a4:	00 c0       	rjmp	.+0      	; 0x2a6 <ADCRead+0x14>
+	_delay_us(10);//delay needed for stabilization of the ACD input voltag
+	ADCSRA |= (1 << ADSC);//start convertion
+ 2a6:	36 9a       	sbi	0x06, 6	; 6
+	while ((ADCSRA & (1 << ADIF)) == 0);//wait for complete conversion
+ 2a8:	34 9b       	sbis	0x06, 4	; 6
+ 2aa:	fe cf       	rjmp	.-4      	; 0x2a8 <ADCRead+0x16>
+	ADCSRA |=(1 << ADIF);
+ 2ac:	34 9a       	sbi	0x06, 4	; 6
+	flag.adcRead = FALSE;
+ 2ae:	80 91 8e 00 	lds	r24, 0x008E
+ 2b2:	8b 7f       	andi	r24, 0xFB	; 251
+ 2b4:	80 93 8e 00 	sts	0x008E, r24
+	return ADCW;
+ 2b8:	84 b1       	in	r24, 0x04	; 4
+ 2ba:	95 b1       	in	r25, 0x05	; 5
+}
+ 2bc:	08 95       	ret
+
+000002be <ResultBcd>:
+
+void ResultBcd(uint16_t data)
+{
+ 2be:	fc 01       	movw	r30, r24
+	uint8_t i;
+	if(adcResult > 1000 || adcResult < 3)
+ 2c0:	20 91 90 00 	lds	r18, 0x0090
+ 2c4:	30 91 91 00 	lds	r19, 0x0091
+ 2c8:	23 50       	subi	r18, 0x03	; 3
+ 2ca:	31 09       	sbc	r19, r1
+ 2cc:	26 3e       	cpi	r18, 0xE6	; 230
+ 2ce:	33 40       	sbci	r19, 0x03	; 3
+ 2d0:	50 f0       	brcs	.+20     	; 0x2e6 <ResultBcd+0x28>
+	{//якщо обрив датчика ,або коротке замикання
+		for (i = 0; i <= 3; i++) 
+		{
+			dataOut[i] = 10;//виводимо на дисплей рисочки
+ 2d2:	8a e0       	ldi	r24, 0x0A	; 10
+ 2d4:	80 93 a7 00 	sts	0x00A7, r24
+ 2d8:	80 93 a8 00 	sts	0x00A8, r24
+ 2dc:	80 93 a9 00 	sts	0x00A9, r24
+ 2e0:	80 93 aa 00 	sts	0x00AA, r24
+ 2e4:	08 95       	ret
+		}
+		return ;
+	}
+	dataOut[1] = data/100;
+ 2e6:	cf 01       	movw	r24, r30
+ 2e8:	64 e6       	ldi	r22, 0x64	; 100
+ 2ea:	70 e0       	ldi	r23, 0x00	; 0
+ 2ec:	fa d1       	rcall	.+1012   	; 0x6e2 <__udivmodhi4>
+ 2ee:	60 93 a8 00 	sts	0x00A8, r22
+	dataOut[2] = (data / 10) % 10;
+ 2f2:	2a e0       	ldi	r18, 0x0A	; 10
+ 2f4:	30 e0       	ldi	r19, 0x00	; 0
+ 2f6:	cf 01       	movw	r24, r30
+ 2f8:	b9 01       	movw	r22, r18
+ 2fa:	f3 d1       	rcall	.+998    	; 0x6e2 <__udivmodhi4>
+ 2fc:	48 2f       	mov	r20, r24
+ 2fe:	cb 01       	movw	r24, r22
+ 300:	b9 01       	movw	r22, r18
+ 302:	ef d1       	rcall	.+990    	; 0x6e2 <__udivmodhi4>
+ 304:	80 93 a9 00 	sts	0x00A9, r24
+	dataOut[3] = data % 10;
+ 308:	40 93 aa 00 	sts	0x00AA, r20
+ 30c:	08 95       	ret
+
+0000030e <SaveEepromMode>:
+}
+
+void SaveEepromMode(void)
+{
+	if(flag.tempEepromWrite)
+ 30e:	80 91 8e 00 	lds	r24, 0x008E
+ 312:	85 ff       	sbrs	r24, 5
+ 314:	0c c0       	rjmp	.+24     	; 0x32e <SaveEepromMode+0x20>
+	{
+		eeprom_write_word(&setTempEeprom,setTemp);
+ 316:	60 91 78 00 	lds	r22, 0x0078
+ 31a:	70 91 79 00 	lds	r23, 0x0079
+ 31e:	80 e0       	ldi	r24, 0x00	; 0
+ 320:	90 e0       	ldi	r25, 0x00	; 0
+ 322:	0b d2       	rcall	.+1046   	; 0x73a <eeprom_write_word>
+		flag.tempEepromWrite = FALSE;
+ 324:	80 91 8e 00 	lds	r24, 0x008E
+ 328:	8f 7d       	andi	r24, 0xDF	; 223
+ 32a:	80 93 8e 00 	sts	0x008E, r24
+	}
+	flag.eepromWrite = FALSE;
+ 32e:	80 91 8e 00 	lds	r24, 0x008E
+ 332:	87 7f       	andi	r24, 0xF7	; 247
+ 334:	80 93 8e 00 	sts	0x008E, r24
+ 338:	08 95       	ret
+
+0000033a <main>:
+int16_t diffErr;
+
+int main(void)
+{
+	uint8_t byte;
+	Timer0Init();
+ 33a:	af de       	rcall	.-674    	; 0x9a <Timer0Init>
+	ADCInit();
+ 33c:	a3 df       	rcall	.-186    	; 0x284 <ADCInit>
+	UsartInit();
+ 33e:	26 d1       	rcall	.+588    	; 0x58c <UsartInit>
+	Init();
+ 340:	94 de       	rcall	.-728    	; 0x6a <Init>
+	//дві секунди показуємо встановлену температуру
+	countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+ 342:	80 ed       	ldi	r24, 0xD0	; 208
+ 344:	97 e0       	ldi	r25, 0x07	; 7
+ 346:	90 93 75 00 	sts	0x0075, r25
+ 34a:	80 93 74 00 	sts	0x0074, r24
+	flag.setTempVisible = TRUE;
+ 34e:	80 91 8e 00 	lds	r24, 0x008E
+ 352:	80 64       	ori	r24, 0x40	; 64
+ 354:	80 93 8e 00 	sts	0x008E, r24
+	UsartPutString((uint8_t*)"Hello!");
+ 358:	85 e6       	ldi	r24, 0x65	; 101
+ 35a:	90 e0       	ldi	r25, 0x00	; 0
+ 35c:	44 d1       	rcall	.+648    	; 0x5e6 <UsartPutString>
+ * на одиницю регулюючого сигналу припадає 1 півперіод (2%)
+ */
+			int16_t tempAdc;
+			adcResult = ADCRead(0);
+			/* adcResult = 100; */
+			tempAdc = (setTemp * 24) / 17;//переведення встановленої температури
+ 35e:	98 e1       	ldi	r25, 0x18	; 24
+ 360:	59 2e       	mov	r5, r25
+ 362:	21 e1       	ldi	r18, 0x11	; 17
+ 364:	82 2e       	mov	r8, r18
+ 366:	91 2c       	mov	r9, r1
+		}
+		//зчитування температури кожної пів секунди
+		if(flag.readTemp)
+		{
+			flag.readTemp = FALSE;
+			temperatura = (adcResult * 17) / 24;
+ 368:	38 e1       	ldi	r19, 0x18	; 24
+ 36a:	e3 2e       	mov	r14, r19
+ 36c:	f1 2c       	mov	r15, r1
+			else if(keyPressed == _DOWN)
+			{
+				setTemp --;
+				if(setTemp < 0)
+					setTemp = 0;
+				countTimeWriteEeprom = TIME_WRITE_EEPROM;
+ 36e:	c8 eb       	ldi	r28, 0xB8	; 184
+ 370:	db e0       	ldi	r29, 0x0B	; 11
+				flag.tempEepromWrite = TRUE;
+				countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+ 372:	00 ed       	ldi	r16, 0xD0	; 208
+ 374:	17 e0       	ldi	r17, 0x07	; 7
+			KeyScan();
+			if(keyPressed == _UP)
+			{
+				setTemp++;
+				if(setTemp > MAX_TEMP)
+					setTemp = MAX_TEMP;
+ 376:	4a ef       	ldi	r20, 0xFA	; 250
+ 378:	c4 2e       	mov	r12, r20
+ 37a:	d1 2c       	mov	r13, r1
+			diffErr = error - preErr;
+			pwm = 10 * error  +   integralErr + 2 * diffErr;
+			if(pwm >=0 && pwm <= 25)
+				integralErr += error;
+			if(integralErr > 25)
+				integralErr = 25;
+ 37c:	59 e1       	ldi	r21, 0x19	; 25
+ 37e:	a5 2e       	mov	r10, r21
+ 380:	b1 2c       	mov	r11, r1
+			pwmCounter ++;
+			if(pwmCounter >= 50)
+				pwmCounter = 0;
+			error = tempAdc - adcResult;
+			diffErr = error - preErr;
+			pwm = 10 * error  +   integralErr + 2 * diffErr;
+ 382:	ba e0       	ldi	r27, 0x0A	; 10
+ 384:	6b 2e       	mov	r6, r27
+		}
+		//зчитування температури кожної пів секунди
+		if(flag.readTemp)
+		{
+			flag.readTemp = FALSE;
+			temperatura = (adcResult * 17) / 24;
+ 386:	81 e1       	ldi	r24, 0x11	; 17
+ 388:	78 2e       	mov	r7, r24
+	countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+	flag.setTempVisible = TRUE;
+	UsartPutString((uint8_t*)"Hello!");
+	while(1)
+	{
+		if(flag.keyScan)
+ 38a:	80 91 8e 00 	lds	r24, 0x008E
+ 38e:	80 ff       	sbrs	r24, 0
+ 390:	38 c0       	rjmp	.+112    	; 0x402 <main+0xc8>
+		{
+			KeyScan();
+ 392:	1d df       	rcall	.-454    	; 0x1ce <KeyScan>
+			if(keyPressed == _UP)
+ 394:	80 91 a6 00 	lds	r24, 0x00A6
+ 398:	81 30       	cpi	r24, 0x01	; 1
+ 39a:	69 f4       	brne	.+26     	; 0x3b6 <main+0x7c>
+			{
+				setTemp++;
+ 39c:	80 91 78 00 	lds	r24, 0x0078
+ 3a0:	90 91 79 00 	lds	r25, 0x0079
+ 3a4:	01 96       	adiw	r24, 0x01	; 1
+				if(setTemp > MAX_TEMP)
+ 3a6:	8b 3f       	cpi	r24, 0xFB	; 251
+ 3a8:	91 05       	cpc	r25, r1
+ 3aa:	74 f0       	brlt	.+28     	; 0x3c8 <main+0x8e>
+					setTemp = MAX_TEMP;
+ 3ac:	d0 92 79 00 	sts	0x0079, r13
+ 3b0:	c0 92 78 00 	sts	0x0078, r12
+ 3b4:	12 c0       	rjmp	.+36     	; 0x3da <main+0xa0>
+				countTimeWriteEeprom = TIME_WRITE_EEPROM;
+				flag.tempEepromWrite = TRUE;
+				countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+				flag.setTempVisible = TRUE;
+			}
+			else if(keyPressed == _DOWN)
+ 3b6:	82 30       	cpi	r24, 0x02	; 2
+ 3b8:	11 f5       	brne	.+68     	; 0x3fe <main+0xc4>
+			{
+				setTemp --;
+ 3ba:	80 91 78 00 	lds	r24, 0x0078
+ 3be:	90 91 79 00 	lds	r25, 0x0079
+ 3c2:	01 97       	sbiw	r24, 0x01	; 1
+				if(setTemp < 0)
+ 3c4:	97 fd       	sbrc	r25, 7
+ 3c6:	05 c0       	rjmp	.+10     	; 0x3d2 <main+0x98>
+				countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+				flag.setTempVisible = TRUE;
+			}
+			else if(keyPressed == _DOWN)
+			{
+				setTemp --;
+ 3c8:	90 93 79 00 	sts	0x0079, r25
+ 3cc:	80 93 78 00 	sts	0x0078, r24
+ 3d0:	04 c0       	rjmp	.+8      	; 0x3da <main+0xa0>
+				if(setTemp < 0)
+					setTemp = 0;
+ 3d2:	10 92 79 00 	sts	0x0079, r1
+ 3d6:	10 92 78 00 	sts	0x0078, r1
+				countTimeWriteEeprom = TIME_WRITE_EEPROM;
+ 3da:	d0 93 77 00 	sts	0x0077, r29
+ 3de:	c0 93 76 00 	sts	0x0076, r28
+				flag.tempEepromWrite = TRUE;
+ 3e2:	80 91 8e 00 	lds	r24, 0x008E
+ 3e6:	80 62       	ori	r24, 0x20	; 32
+ 3e8:	80 93 8e 00 	sts	0x008E, r24
+				countSetTempVisible = TIME_SET_TEMP_VISIBLE;
+ 3ec:	10 93 75 00 	sts	0x0075, r17
+ 3f0:	00 93 74 00 	sts	0x0074, r16
+				flag.setTempVisible = TRUE;
+ 3f4:	80 91 8e 00 	lds	r24, 0x008E
+ 3f8:	80 64       	ori	r24, 0x40	; 64
+ 3fa:	80 93 8e 00 	sts	0x008E, r24
+			/* 	countTimeWriteEeprom = TIME_WRITE_EEPROM; */
+			/* 	flag.modeEepromWrite = TRUE; */
+			/* 	countSetTempVisible = TIME_SET_TEMP_VISIBLE; */
+			/* 	flag.setTempVisible = TRUE; */
+			/* } */
+			keyPressed = 0;
+ 3fe:	10 92 a6 00 	sts	0x00A6, r1
+		}
+		if(flag.adcRead)
+ 402:	80 91 8e 00 	lds	r24, 0x008E
+ 406:	82 ff       	sbrs	r24, 2
+ 408:	73 c0       	rjmp	.+230    	; 0x4f0 <__stack+0x91>
+ * Період ШІМ 500мс
+ * Зчитування adc 10мс , що відповідає одному півперіоду мережної напруги
+ * на одиницю регулюючого сигналу припадає 1 півперіод (2%)
+ */
+			int16_t tempAdc;
+			adcResult = ADCRead(0);
+ 40a:	80 e0       	ldi	r24, 0x00	; 0
+ 40c:	42 df       	rcall	.-380    	; 0x292 <ADCRead>
+ 40e:	fc 01       	movw	r30, r24
+ 410:	90 93 91 00 	sts	0x0091, r25
+ 414:	80 93 90 00 	sts	0x0090, r24
+			/* adcResult = 100; */
+			tempAdc = (setTemp * 24) / 17;//переведення встановленої температури
+ 418:	20 91 78 00 	lds	r18, 0x0078
+ 41c:	30 91 79 00 	lds	r19, 0x0079
+ 420:	52 9e       	mul	r5, r18
+ 422:	c0 01       	movw	r24, r0
+ 424:	53 9e       	mul	r5, r19
+ 426:	90 0d       	add	r25, r0
+ 428:	11 24       	eor	r1, r1
+ 42a:	b4 01       	movw	r22, r8
+ 42c:	6e d1       	rcall	.+732    	; 0x70a <__divmodhi4>
+													//відповідно до adc
+			pwmCounter ++;
+ 42e:	80 91 af 00 	lds	r24, 0x00AF
+ 432:	90 91 b0 00 	lds	r25, 0x00B0
+ 436:	01 96       	adiw	r24, 0x01	; 1
+			if(pwmCounter >= 50)
+ 438:	82 33       	cpi	r24, 0x32	; 50
+ 43a:	91 05       	cpc	r25, r1
+ 43c:	2c f4       	brge	.+10     	; 0x448 <main+0x10e>
+			int16_t tempAdc;
+			adcResult = ADCRead(0);
+			/* adcResult = 100; */
+			tempAdc = (setTemp * 24) / 17;//переведення встановленої температури
+													//відповідно до adc
+			pwmCounter ++;
+ 43e:	90 93 b0 00 	sts	0x00B0, r25
+ 442:	80 93 af 00 	sts	0x00AF, r24
+ 446:	04 c0       	rjmp	.+8      	; 0x450 <main+0x116>
+			if(pwmCounter >= 50)
+				pwmCounter = 0;
+ 448:	10 92 b0 00 	sts	0x00B0, r1
+ 44c:	10 92 af 00 	sts	0x00AF, r1
+			error = tempAdc - adcResult;
+ 450:	6e 1b       	sub	r22, r30
+ 452:	7f 0b       	sbc	r23, r31
+ 454:	70 93 b6 00 	sts	0x00B6, r23
+ 458:	60 93 b5 00 	sts	0x00B5, r22
+			diffErr = error - preErr;
+ 45c:	80 91 ad 00 	lds	r24, 0x00AD
+ 460:	90 91 ae 00 	lds	r25, 0x00AE
+ 464:	9b 01       	movw	r18, r22
+ 466:	28 1b       	sub	r18, r24
+ 468:	39 0b       	sbc	r19, r25
+ 46a:	30 93 b2 00 	sts	0x00B2, r19
+ 46e:	20 93 b1 00 	sts	0x00B1, r18
+			pwm = 10 * error  +   integralErr + 2 * diffErr;
+ 472:	80 91 b3 00 	lds	r24, 0x00B3
+ 476:	90 91 b4 00 	lds	r25, 0x00B4
+ 47a:	66 9e       	mul	r6, r22
+ 47c:	a0 01       	movw	r20, r0
+ 47e:	67 9e       	mul	r6, r23
+ 480:	50 0d       	add	r21, r0
+ 482:	11 24       	eor	r1, r1
+ 484:	48 0f       	add	r20, r24
+ 486:	59 1f       	adc	r21, r25
+ 488:	22 0f       	add	r18, r18
+ 48a:	33 1f       	adc	r19, r19
+ 48c:	24 0f       	add	r18, r20
+ 48e:	35 1f       	adc	r19, r21
+ 490:	30 93 b8 00 	sts	0x00B8, r19
+ 494:	20 93 b7 00 	sts	0x00B7, r18
+			if(pwm >=0 && pwm <= 25)
+ 498:	2a 31       	cpi	r18, 0x1A	; 26
+ 49a:	31 05       	cpc	r19, r1
+ 49c:	30 f4       	brcc	.+12     	; 0x4aa <__stack+0x4b>
+				integralErr += error;
+ 49e:	86 0f       	add	r24, r22
+ 4a0:	97 1f       	adc	r25, r23
+ 4a2:	90 93 b4 00 	sts	0x00B4, r25
+ 4a6:	80 93 b3 00 	sts	0x00B3, r24
+			if(integralErr > 25)
+ 4aa:	80 91 b3 00 	lds	r24, 0x00B3
+ 4ae:	90 91 b4 00 	lds	r25, 0x00B4
+ 4b2:	4a 97       	sbiw	r24, 0x1a	; 26
+ 4b4:	24 f0       	brlt	.+8      	; 0x4be <__stack+0x5f>
+				integralErr = 25;
+ 4b6:	b0 92 b4 00 	sts	0x00B4, r11
+ 4ba:	a0 92 b3 00 	sts	0x00B3, r10
+			preErr = error;//поточна помилка стає попередньою (використовується для розрахунку
+ 4be:	70 93 ae 00 	sts	0x00AE, r23
+ 4c2:	60 93 ad 00 	sts	0x00AD, r22
+						   //диференціальної складової)
+/*
+ * якщо коротке замикання або обрив датчика ,
+ * відключаємо підігрів
+ */
+			if(pwm < pwmCounter || adcResult > 1000 )
+ 4c6:	80 91 af 00 	lds	r24, 0x00AF
+ 4ca:	90 91 b0 00 	lds	r25, 0x00B0
+ 4ce:	28 17       	cp	r18, r24
+ 4d0:	39 07       	cpc	r19, r25
+ 4d2:	1c f0       	brlt	.+6      	; 0x4da <__stack+0x7b>
+ 4d4:	e9 3e       	cpi	r30, 0xE9	; 233
+ 4d6:	f3 40       	sbci	r31, 0x03	; 3
+ 4d8:	2c f0       	brlt	.+10     	; 0x4e4 <__stack+0x85>
+			{
+				CONTR_PORT &= ~(1 << CONTR_OUT);
+ 4da:	94 98       	cbi	0x12, 4	; 18
+				flag.digPoint = 0;
+ 4dc:	80 91 8e 00 	lds	r24, 0x008E
+ 4e0:	8f 77       	andi	r24, 0x7F	; 127
+ 4e2:	04 c0       	rjmp	.+8      	; 0x4ec <__stack+0x8d>
+			}
+			else 
+			{
+				CONTR_PORT |= (1 << CONTR_OUT);
+ 4e4:	94 9a       	sbi	0x12, 4	; 18
+				flag.digPoint = 1;// індикація нагріву
+ 4e6:	80 91 8e 00 	lds	r24, 0x008E
+ 4ea:	80 68       	ori	r24, 0x80	; 128
+ 4ec:	80 93 8e 00 	sts	0x008E, r24
+			}
+		}
+		if(flag.setTempVisible)
+ 4f0:	80 91 8e 00 	lds	r24, 0x008E
+ 4f4:	86 ff       	sbrs	r24, 6
+ 4f6:	05 c0       	rjmp	.+10     	; 0x502 <__stack+0xa3>
+		{
+			ResultBcd(setTemp);
+ 4f8:	80 91 78 00 	lds	r24, 0x0078
+ 4fc:	90 91 79 00 	lds	r25, 0x0079
+ 500:	04 c0       	rjmp	.+8      	; 0x50a <__stack+0xab>
+		}
+		else 
+		{
+			ResultBcd(temperatura);
+ 502:	80 91 ab 00 	lds	r24, 0x00AB
+ 506:	90 91 ac 00 	lds	r25, 0x00AC
+ 50a:	d9 de       	rcall	.-590    	; 0x2be <ResultBcd>
+		}
+		//обновлення індикації кожних 5мс
+		if(flag.lcdUpdate)
+ 50c:	80 91 8e 00 	lds	r24, 0x008E
+ 510:	81 fd       	sbrc	r24, 1
+		{
+			LcdUpdate();
+ 512:	7e de       	rcall	.-772    	; 0x210 <LcdUpdate>
+		}
+		//зчитування температури кожної пів секунди
+		if(flag.readTemp)
+ 514:	80 91 8f 00 	lds	r24, 0x008F
+ 518:	80 ff       	sbrs	r24, 0
+ 51a:	14 c0       	rjmp	.+40     	; 0x544 <__stack+0xe5>
+		{
+			flag.readTemp = FALSE;
+ 51c:	80 91 8f 00 	lds	r24, 0x008F
+ 520:	8e 7f       	andi	r24, 0xFE	; 254
+ 522:	80 93 8f 00 	sts	0x008F, r24
+			temperatura = (adcResult * 17) / 24;
+ 526:	20 91 90 00 	lds	r18, 0x0090
+ 52a:	30 91 91 00 	lds	r19, 0x0091
+ 52e:	72 9e       	mul	r7, r18
+ 530:	c0 01       	movw	r24, r0
+ 532:	73 9e       	mul	r7, r19
+ 534:	90 0d       	add	r25, r0
+ 536:	11 24       	eor	r1, r1
+ 538:	b7 01       	movw	r22, r14
+ 53a:	e7 d0       	rcall	.+462    	; 0x70a <__divmodhi4>
+ 53c:	70 93 ac 00 	sts	0x00AC, r23
+ 540:	60 93 ab 00 	sts	0x00AB, r22
+		}
+		if(flag.eepromWrite)
+ 544:	80 91 8e 00 	lds	r24, 0x008E
+ 548:	83 fd       	sbrc	r24, 3
+		{
+			SaveEepromMode();
+ 54a:	e1 de       	rcall	.-574    	; 0x30e <SaveEepromMode>
+		}
+		byte = UsartGetChar();
+ 54c:	57 d0       	rcall	.+174    	; 0x5fc <UsartGetChar>
+		if(byte)
+ 54e:	88 23       	and	r24, r24
+ 550:	09 f4       	brne	.+2      	; 0x554 <__stack+0xf5>
+ 552:	1b cf       	rjmp	.-458    	; 0x38a <main+0x50>
+		{
+		if(byte == 'T')
+ 554:	84 35       	cpi	r24, 0x54	; 84
+ 556:	89 f4       	brne	.+34     	; 0x57a <__stack+0x11b>
+		{
+			UsartPutString((uint8_t*)"Temp=");
+ 558:	8c e6       	ldi	r24, 0x6C	; 108
+ 55a:	90 e0       	ldi	r25, 0x00	; 0
+ 55c:	44 d0       	rcall	.+136    	; 0x5e6 <UsartPutString>
+			UsartPutChar(dataOut[1] + '0');
+ 55e:	80 91 a8 00 	lds	r24, 0x00A8
+ 562:	80 5d       	subi	r24, 0xD0	; 208
+ 564:	1d d0       	rcall	.+58     	; 0x5a0 <UsartPutChar>
+			UsartPutChar(dataOut[2] + '0');
+ 566:	80 91 a9 00 	lds	r24, 0x00A9
+ 56a:	80 5d       	subi	r24, 0xD0	; 208
+ 56c:	19 d0       	rcall	.+50     	; 0x5a0 <UsartPutChar>
+			UsartPutChar(dataOut[3] + '0');
+ 56e:	80 91 aa 00 	lds	r24, 0x00AA
+ 572:	80 5d       	subi	r24, 0xD0	; 208
+ 574:	15 d0       	rcall	.+42     	; 0x5a0 <UsartPutChar>
+			UsartPutChar('\r');
+ 576:	8d e0       	ldi	r24, 0x0D	; 13
+ 578:	07 c0       	rjmp	.+14     	; 0x588 <__stack+0x129>
+		}
+		else if(byte == 'I')
+ 57a:	89 34       	cpi	r24, 0x49	; 73
+ 57c:	21 f4       	brne	.+8      	; 0x586 <__stack+0x127>
+			UsartPutChar(integralErr + '0');
+ 57e:	80 91 b3 00 	lds	r24, 0x00B3
+ 582:	80 5d       	subi	r24, 0xD0	; 208
+ 584:	01 c0       	rjmp	.+2      	; 0x588 <__stack+0x129>
+		else
+			UsartPutChar('?');
+ 586:	8f e3       	ldi	r24, 0x3F	; 63
+ 588:	0b d0       	rcall	.+22     	; 0x5a0 <UsartPutChar>
+ 58a:	fb ce       	rjmp	.-522    	; 0x382 <main+0x48>
+
+0000058c <UsartInit>:
+volatile uint8_t rxHeadBuffer;
+volatile uint8_t rxCountBuffer;
+
+void UsartInit(void){
+	uint16_t i = USART_BAUDRATE_DIV;
+	UBRRL = i;
+ 58c:	89 e1       	ldi	r24, 0x19	; 25
+ 58e:	89 b9       	out	0x09, r24	; 9
+	UBRRH = i >> 8;
+ 590:	10 bc       	out	0x20, r1	; 32
+	UCSRC |= (1 << URSEL) | (1 << UCSZ1) | (1 << UCSZ0);//8-bit ,1-stop bit,no parity
+ 592:	80 b5       	in	r24, 0x20	; 32
+ 594:	86 68       	ori	r24, 0x86	; 134
+ 596:	80 bd       	out	0x20, r24	; 32
+	UCSRB |= (1 << TXEN) | (1 << RXEN) | (1 << TXCIE) |
+ 598:	8a b1       	in	r24, 0x0a	; 10
+ 59a:	88 6d       	ori	r24, 0xD8	; 216
+ 59c:	8a b9       	out	0x0a, r24	; 10
+ 59e:	08 95       	ret
+
+000005a0 <UsartPutChar>:
+			(1 << RXCIE);//enable tx ,enable interrupt tx
+}
+void UsartPutChar(uint8_t ch){
+	if(bit_is_set(UCSRA,UDRE) && txCountBuffer == 0)
+ 5a0:	5d 9b       	sbis	0x0b, 5	; 11
+ 5a2:	06 c0       	rjmp	.+12     	; 0x5b0 <UsartPutChar+0x10>
+ 5a4:	90 91 bc 00 	lds	r25, 0x00BC
+ 5a8:	91 11       	cpse	r25, r1
+ 5aa:	02 c0       	rjmp	.+4      	; 0x5b0 <UsartPutChar+0x10>
+		UDR = ch;
+ 5ac:	8c b9       	out	0x0c, r24	; 12
+ 5ae:	08 95       	ret
+	else if(txCountBuffer < USART_TX_BUFFER_SIZE){
+ 5b0:	90 91 bc 00 	lds	r25, 0x00BC
+ 5b4:	94 31       	cpi	r25, 0x14	; 20
+ 5b6:	b0 f4       	brcc	.+44     	; 0x5e4 <UsartPutChar+0x44>
+		txCountBuffer ++;
+ 5b8:	90 91 bc 00 	lds	r25, 0x00BC
+ 5bc:	9f 5f       	subi	r25, 0xFF	; 255
+ 5be:	90 93 bc 00 	sts	0x00BC, r25
+		usartTxBuffer[txHeadBuffer] = ch;
+ 5c2:	e0 91 ba 00 	lds	r30, 0x00BA
+ 5c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 5c8:	ee 56       	subi	r30, 0x6E	; 110
+ 5ca:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5cc:	80 83       	st	Z, r24
+		txHeadBuffer ++;
+ 5ce:	80 91 ba 00 	lds	r24, 0x00BA
+ 5d2:	8f 5f       	subi	r24, 0xFF	; 255
+ 5d4:	80 93 ba 00 	sts	0x00BA, r24
+		if(txHeadBuffer == USART_TX_BUFFER_SIZE)
+ 5d8:	80 91 ba 00 	lds	r24, 0x00BA
+ 5dc:	84 31       	cpi	r24, 0x14	; 20
+ 5de:	11 f4       	brne	.+4      	; 0x5e4 <UsartPutChar+0x44>
+			txHeadBuffer = 0;
+ 5e0:	10 92 ba 00 	sts	0x00BA, r1
+ 5e4:	08 95       	ret
+
+000005e6 <UsartPutString>:
+	}
+}
+void UsartPutString(uint8_t *string){
+ 5e6:	cf 93       	push	r28
+ 5e8:	df 93       	push	r29
+ 5ea:	ec 01       	movw	r28, r24
+	while(*string){
+ 5ec:	89 91       	ld	r24, Y+
+ 5ee:	88 23       	and	r24, r24
+ 5f0:	11 f0       	breq	.+4      	; 0x5f6 <UsartPutString+0x10>
+		UsartPutChar(*string);
+ 5f2:	d6 df       	rcall	.-84     	; 0x5a0 <UsartPutChar>
+ 5f4:	fb cf       	rjmp	.-10     	; 0x5ec <UsartPutString+0x6>
+		string++;
+	}
+}
+ 5f6:	df 91       	pop	r29
+ 5f8:	cf 91       	pop	r28
+ 5fa:	08 95       	ret
+
+000005fc <UsartGetChar>:
+uint8_t  UsartGetChar(void){
+	uint8_t ch = 0;
+	if(rxCountBuffer){
+ 5fc:	80 91 be 00 	lds	r24, 0x00BE
+ 600:	88 23       	and	r24, r24
+ 602:	b9 f0       	breq	.+46     	; 0x632 <UsartGetChar+0x36>
+		ch = usartRxBuffer[rxTailBuffer];
+ 604:	e0 91 bb 00 	lds	r30, 0x00BB
+ 608:	f0 e0       	ldi	r31, 0x00	; 0
+ 60a:	e6 58       	subi	r30, 0x86	; 134
+ 60c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 60e:	80 81       	ld	r24, Z
+		rxCountBuffer --;
+ 610:	90 91 be 00 	lds	r25, 0x00BE
+ 614:	91 50       	subi	r25, 0x01	; 1
+ 616:	90 93 be 00 	sts	0x00BE, r25
+		rxTailBuffer ++;
+ 61a:	90 91 bb 00 	lds	r25, 0x00BB
+ 61e:	9f 5f       	subi	r25, 0xFF	; 255
+ 620:	90 93 bb 00 	sts	0x00BB, r25
+		if(rxTailBuffer == USART_RX_BUFFER_SIZE)
+ 624:	90 91 bb 00 	lds	r25, 0x00BB
+ 628:	94 31       	cpi	r25, 0x14	; 20
+ 62a:	21 f4       	brne	.+8      	; 0x634 <UsartGetChar+0x38>
+			rxTailBuffer = 0;
+ 62c:	10 92 bb 00 	sts	0x00BB, r1
+ 630:	08 95       	ret
+		UsartPutChar(*string);
+		string++;
+	}
+}
+uint8_t  UsartGetChar(void){
+	uint8_t ch = 0;
+ 632:	80 e0       	ldi	r24, 0x00	; 0
+		rxTailBuffer ++;
+		if(rxTailBuffer == USART_RX_BUFFER_SIZE)
+			rxTailBuffer = 0;
+	}
+	return ch;
+}
+ 634:	08 95       	ret
+
+00000636 <__vector_13>:
+ISR(USART_TXC_vect){
+ 636:	1f 92       	push	r1
+ 638:	0f 92       	push	r0
+ 63a:	0f b6       	in	r0, 0x3f	; 63
+ 63c:	0f 92       	push	r0
+ 63e:	11 24       	eor	r1, r1
+ 640:	8f 93       	push	r24
+ 642:	ef 93       	push	r30
+ 644:	ff 93       	push	r31
+	if(txCountBuffer){
+ 646:	80 91 bc 00 	lds	r24, 0x00BC
+ 64a:	88 23       	and	r24, r24
+ 64c:	b9 f0       	breq	.+46     	; 0x67c <__vector_13+0x46>
+		UDR	= usartTxBuffer[txTailBuffer];
+ 64e:	e0 91 bd 00 	lds	r30, 0x00BD
+ 652:	f0 e0       	ldi	r31, 0x00	; 0
+ 654:	ee 56       	subi	r30, 0x6E	; 110
+ 656:	ff 4f       	sbci	r31, 0xFF	; 255
+ 658:	80 81       	ld	r24, Z
+ 65a:	8c b9       	out	0x0c, r24	; 12
+		txCountBuffer --;
+ 65c:	80 91 bc 00 	lds	r24, 0x00BC
+ 660:	81 50       	subi	r24, 0x01	; 1
+ 662:	80 93 bc 00 	sts	0x00BC, r24
+		txTailBuffer ++;
+ 666:	80 91 bd 00 	lds	r24, 0x00BD
+ 66a:	8f 5f       	subi	r24, 0xFF	; 255
+ 66c:	80 93 bd 00 	sts	0x00BD, r24
+		if(txTailBuffer == USART_TX_BUFFER_SIZE)
+ 670:	80 91 bd 00 	lds	r24, 0x00BD
+ 674:	84 31       	cpi	r24, 0x14	; 20
+ 676:	11 f4       	brne	.+4      	; 0x67c <__vector_13+0x46>
+			txTailBuffer = 0;
+ 678:	10 92 bd 00 	sts	0x00BD, r1
+	}
+}
+ 67c:	ff 91       	pop	r31
+ 67e:	ef 91       	pop	r30
+ 680:	8f 91       	pop	r24
+ 682:	0f 90       	pop	r0
+ 684:	0f be       	out	0x3f, r0	; 63
+ 686:	0f 90       	pop	r0
+ 688:	1f 90       	pop	r1
+ 68a:	18 95       	reti
+
+0000068c <__vector_11>:
+ISR(USART_RXC_vect){
+ 68c:	1f 92       	push	r1
+ 68e:	0f 92       	push	r0
+ 690:	0f b6       	in	r0, 0x3f	; 63
+ 692:	0f 92       	push	r0
+ 694:	11 24       	eor	r1, r1
+ 696:	8f 93       	push	r24
+ 698:	ef 93       	push	r30
+ 69a:	ff 93       	push	r31
+	if(rxCountBuffer < USART_RX_BUFFER_SIZE){
+ 69c:	80 91 be 00 	lds	r24, 0x00BE
+ 6a0:	84 31       	cpi	r24, 0x14	; 20
+ 6a2:	b8 f4       	brcc	.+46     	; 0x6d2 <__vector_11+0x46>
+		usartRxBuffer[rxHeadBuffer] = UDR;
+ 6a4:	e0 91 b9 00 	lds	r30, 0x00B9
+ 6a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 6aa:	8c b1       	in	r24, 0x0c	; 12
+ 6ac:	e6 58       	subi	r30, 0x86	; 134
+ 6ae:	ff 4f       	sbci	r31, 0xFF	; 255
+ 6b0:	80 83       	st	Z, r24
+		rxHeadBuffer ++;
+ 6b2:	80 91 b9 00 	lds	r24, 0x00B9
+ 6b6:	8f 5f       	subi	r24, 0xFF	; 255
+ 6b8:	80 93 b9 00 	sts	0x00B9, r24
+		rxCountBuffer ++;
+ 6bc:	80 91 be 00 	lds	r24, 0x00BE
+ 6c0:	8f 5f       	subi	r24, 0xFF	; 255
+ 6c2:	80 93 be 00 	sts	0x00BE, r24
+		if(rxHeadBuffer ==  USART_TX_BUFFER_SIZE)
+ 6c6:	80 91 b9 00 	lds	r24, 0x00B9
+ 6ca:	84 31       	cpi	r24, 0x14	; 20
+ 6cc:	11 f4       	brne	.+4      	; 0x6d2 <__vector_11+0x46>
+			rxHeadBuffer = 0;
+ 6ce:	10 92 b9 00 	sts	0x00B9, r1
+	}
+}
+ 6d2:	ff 91       	pop	r31
+ 6d4:	ef 91       	pop	r30
+ 6d6:	8f 91       	pop	r24
+ 6d8:	0f 90       	pop	r0
+ 6da:	0f be       	out	0x3f, r0	; 63
+ 6dc:	0f 90       	pop	r0
+ 6de:	1f 90       	pop	r1
+ 6e0:	18 95       	reti
+
+000006e2 <__udivmodhi4>:
+ 6e2:	aa 1b       	sub	r26, r26
+ 6e4:	bb 1b       	sub	r27, r27
+ 6e6:	51 e1       	ldi	r21, 0x11	; 17
+ 6e8:	07 c0       	rjmp	.+14     	; 0x6f8 <__udivmodhi4_ep>
+
+000006ea <__udivmodhi4_loop>:
+ 6ea:	aa 1f       	adc	r26, r26
+ 6ec:	bb 1f       	adc	r27, r27
+ 6ee:	a6 17       	cp	r26, r22
+ 6f0:	b7 07       	cpc	r27, r23
+ 6f2:	10 f0       	brcs	.+4      	; 0x6f8 <__udivmodhi4_ep>
+ 6f4:	a6 1b       	sub	r26, r22
+ 6f6:	b7 0b       	sbc	r27, r23
+
+000006f8 <__udivmodhi4_ep>:
+ 6f8:	88 1f       	adc	r24, r24
+ 6fa:	99 1f       	adc	r25, r25
+ 6fc:	5a 95       	dec	r21
+ 6fe:	a9 f7       	brne	.-22     	; 0x6ea <__udivmodhi4_loop>
+ 700:	80 95       	com	r24
+ 702:	90 95       	com	r25
+ 704:	bc 01       	movw	r22, r24
+ 706:	cd 01       	movw	r24, r26
+ 708:	08 95       	ret
+
+0000070a <__divmodhi4>:
+ 70a:	97 fb       	bst	r25, 7
+ 70c:	07 2e       	mov	r0, r23
+ 70e:	16 f4       	brtc	.+4      	; 0x714 <__divmodhi4+0xa>
+ 710:	00 94       	com	r0
+ 712:	06 d0       	rcall	.+12     	; 0x720 <__divmodhi4_neg1>
+ 714:	77 fd       	sbrc	r23, 7
+ 716:	08 d0       	rcall	.+16     	; 0x728 <__divmodhi4_neg2>
+ 718:	e4 df       	rcall	.-56     	; 0x6e2 <__udivmodhi4>
+ 71a:	07 fc       	sbrc	r0, 7
+ 71c:	05 d0       	rcall	.+10     	; 0x728 <__divmodhi4_neg2>
+ 71e:	3e f4       	brtc	.+14     	; 0x72e <__divmodhi4_exit>
+
+00000720 <__divmodhi4_neg1>:
+ 720:	90 95       	com	r25
+ 722:	81 95       	neg	r24
+ 724:	9f 4f       	sbci	r25, 0xFF	; 255
+ 726:	08 95       	ret
+
+00000728 <__divmodhi4_neg2>:
+ 728:	70 95       	com	r23
+ 72a:	61 95       	neg	r22
+ 72c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+0000072e <__divmodhi4_exit>:
+ 72e:	08 95       	ret
+
+00000730 <eeprom_read_word>:
+ 730:	a8 e1       	ldi	r26, 0x18	; 24
+ 732:	b0 e0       	ldi	r27, 0x00	; 0
+ 734:	42 e0       	ldi	r20, 0x02	; 2
+ 736:	50 e0       	ldi	r21, 0x00	; 0
+ 738:	05 c0       	rjmp	.+10     	; 0x744 <eeprom_read_blraw>
+
+0000073a <eeprom_write_word>:
+ 73a:	12 d0       	rcall	.+36     	; 0x760 <eeprom_write_byte>
+ 73c:	27 2f       	mov	r18, r23
+ 73e:	11 c0       	rjmp	.+34     	; 0x762 <eeprom_write_r18>
+
+00000740 <eeprom_read_block>:
+ 740:	dc 01       	movw	r26, r24
+ 742:	cb 01       	movw	r24, r22
+
+00000744 <eeprom_read_blraw>:
+ 744:	fc 01       	movw	r30, r24
+ 746:	e1 99       	sbic	0x1c, 1	; 28
+ 748:	fe cf       	rjmp	.-4      	; 0x746 <eeprom_read_blraw+0x2>
+ 74a:	06 c0       	rjmp	.+12     	; 0x758 <eeprom_read_blraw+0x14>
+ 74c:	ff bb       	out	0x1f, r31	; 31
+ 74e:	ee bb       	out	0x1e, r30	; 30
+ 750:	e0 9a       	sbi	0x1c, 0	; 28
+ 752:	31 96       	adiw	r30, 0x01	; 1
+ 754:	0d b2       	in	r0, 0x1d	; 29
+ 756:	0d 92       	st	X+, r0
+ 758:	41 50       	subi	r20, 0x01	; 1
+ 75a:	50 40       	sbci	r21, 0x00	; 0
+ 75c:	b8 f7       	brcc	.-18     	; 0x74c <eeprom_read_blraw+0x8>
+ 75e:	08 95       	ret
+
+00000760 <eeprom_write_byte>:
+ 760:	26 2f       	mov	r18, r22
+
+00000762 <eeprom_write_r18>:
+ 762:	e1 99       	sbic	0x1c, 1	; 28
+ 764:	fe cf       	rjmp	.-4      	; 0x762 <eeprom_write_r18>
+ 766:	9f bb       	out	0x1f, r25	; 31
+ 768:	8e bb       	out	0x1e, r24	; 30
+ 76a:	2d bb       	out	0x1d, r18	; 29
+ 76c:	0f b6       	in	r0, 0x3f	; 63
+ 76e:	f8 94       	cli
+ 770:	e2 9a       	sbi	0x1c, 2	; 28
+ 772:	e1 9a       	sbi	0x1c, 1	; 28
+ 774:	0f be       	out	0x3f, r0	; 63
+ 776:	01 96       	adiw	r24, 0x01	; 1
+ 778:	08 95       	ret
+
+0000077a <_exit>:
+ 77a:	f8 94       	cli
+
+0000077c <__stop_program>:
+ 77c:	ff cf       	rjmp	.-2      	; 0x77c <__stop_program>
